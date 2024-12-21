@@ -1,5 +1,6 @@
 package com.foxminded.korniichyk.car_rest_service;
 
+import com.foxminded.korniichyk.car_rest_service.model.Brand;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

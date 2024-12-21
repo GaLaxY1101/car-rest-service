@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+
+  car-rest-service:
+    build: .
+    container_name: car-rest-service
+    ports:
+      - "8080:8080"
+    depends_on:
+      - car-db
+    environment:
+      - SPRING_DATA_URL=jdbc:postgresql://car-db:5432/postgres
+      - SPRING_DATA_USERNAME=postgres
+      - SPRING_DATA_PASSWORD=postgres
+
+  car-db:
+    image: postgres
+    container_name: car-db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
